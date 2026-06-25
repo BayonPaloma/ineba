@@ -21,6 +21,12 @@
   font-style: normal;
 }*/
 
+:root {
+  --celeste: #33a6e7;
+  --azul: #0054a0;
+  --color-texto: #111827;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -101,7 +107,7 @@ a {
   left: 0;
   width: 250px;
   height: 100vh;
-  background-color: #1f5561;
+  background-color: var(--azul);
   padding-top: 80px;
   transform: translateX(-100%);
   transition: transform 0.4s ease;
@@ -143,14 +149,14 @@ a {
 .btn-menu {
   padding: 10px 20px;
   background-color: #78ccdf;
-  color: #1f5561;
+  color: var(--azul);
   border: 2px solid #77bed2;
   border-radius: 20px;
 }
 
 .hero {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)),
+    linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.5)),
     url("./assets/img/consultorio.png");
   background-size: cover;
   background-position: center;
@@ -172,9 +178,9 @@ a {
   margin-bottom: 1rem;
   letter-spacing: -0.5px;
   line-height: 1.2;
-  color: #1f5561;
+  color: var(--celeste);
   margin-top: 0px;
-  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
+  text-shadow: 3px 1px 0px #0000007f;
 }
 
 .hero h3 {
@@ -199,7 +205,7 @@ a {
 
 .btn-hero {
   padding: 10px 16px;
-  background-color: #1f5561;
+  background-color: var(--celeste);
   color: white;
   border: 1px solid #495e63;
   border-radius: 5px;
@@ -264,7 +270,7 @@ a {
   font-weight: 600;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #368e92;
+  color: var(--azul);
   margin-bottom: 18px;
 }
 
@@ -278,7 +284,7 @@ a {
 }
 
 #tratamos {
-  background-color: #1f5561;
+  background-color: var(--azul);
 }
 
 .contenedor-cuadrados {
@@ -313,7 +319,7 @@ a {
 }
 
 #contacto h2 {
-  color: #1f5561;
+  color: var(--azul);
 }
 
 form {
@@ -380,7 +386,7 @@ form {
 .btn-submit {
   width: 100%;
   padding: 15px;
-  background-color: #1f5561;
+  background-color: var(--azul);
   color: white;
   border: none;
   border-radius: 25px;
@@ -392,7 +398,7 @@ form {
 
 .btn-submit:hover {
   transform: translateY(-2px);
-  background-color: #174049;
+  background-color: #01315e;
 }
 
 .opcional {
@@ -441,7 +447,7 @@ form {
 
 .popup-icon {
   font-size: 3.5rem;
-  color: #1f5561;
+  color: var(--azul);
   margin-bottom: 15px;
 }
 
@@ -462,7 +468,7 @@ form {
 .btn-popup-close {
   width: 100%;
   padding: 12px;
-  background-color: #1f5561;
+  background-color: var(--azul);
   color: white;
   border: none;
   border-radius: 20px;
