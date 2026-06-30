@@ -139,12 +139,6 @@ a {
 .nav-menu a:hover {
   background-color: #78ccdf;
 }
-.hero-content img {
-  height: 100px;
-  width: auto;
-  padding-top: 5px;
-  user-select: none;
-}
 
 .btn-menu {
   padding: 10px 20px;
@@ -306,6 +300,143 @@ a {
 
 .encabezado img {
   height: 20px;
+}
+
+#estudios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0054a0;
+  padding-bottom: 140px;
+}
+
+.tipo-estudio {
+  position: relative;
+  width: 90%;
+  background-color: white;
+  border-radius: 25px;
+  margin-top: 80px;
+  padding: 70px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.399);
+  box-sizing: border-box;
+}
+
+.tipo-estudio::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  border: 2px solid #0154a0;
+  border-radius: 16px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tipo-estudio h4 {
+  position: absolute;
+  top: -2px;
+  left: 2.5rem;
+  transform: translateY(-50%);
+  background-color: white;
+  padding: 0 0.75rem;
+  color: #0154a0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+
+.rectangulo {
+  background-color: #f1f1f1;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.rectangulo:hover {
+  transform: translateY(-2px);
+}
+
+.rectangulo .texto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 50%;
+  margin-left: 40px;
+}
+
+.rectangulo h3 {
+  margin: 0;
+  color: #1a202c;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.rectangulo p {
+  margin: 0;
+  color: #4a5568;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.rectangulo img {
+  width: 420px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  background-color: #e2e8f0;
+  margin-right: 30px;
+}
+
+.estudio-chico {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.estudio-chico .rectangulo {
+  background-color: white;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 30px 20px;
+  border: 1px solid rgb(228, 228, 228);
+}
+
+.estudio-chico .rectangulo:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.estudio-chico .texto {
+  margin-left: 0;
+}
+
+.estudio-chico .rectangulo h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.estudio-chico .rectangulo img {
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 0;
 }
 
 #contacto {
