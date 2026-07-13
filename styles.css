@@ -268,6 +268,14 @@ a {
   font-weight: bold;
 }
 
+.tarjeta ul {
+  list-style-type: square;
+}
+
+.tarjeta li::marker {
+  color: var(--azul);
+}
+
 .titulo-seccion {
   text-align: center;
   margin-bottom: 70px;
@@ -710,6 +718,49 @@ form {
 .btn-popup-close:hover {
   background-color: #112e35;
   color: white;
+}
+
+footer {
+  background-color: #0d3858;
+  color: rgba(255, 255, 255, 0.7);
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  color: white;
+  font-weight: 350;
+
+  padding: 60px 20px 30px 20px;
+  margin-top: 100px;
+}
+
+.footer-container {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+}
+
+footer img {
+  max-width: 100px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.columna-logo {
+  display: flex;
+  max-width: 400px;
+  gap: 40px;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 40px;
+  font-weight: 200;
 }
 
 @media (max-width: 992px) {
