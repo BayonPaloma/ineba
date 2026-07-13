@@ -314,7 +314,7 @@ a {
 
 .contenedor-cajas {
   display: grid;
-  grid-template-columns: 1fr 1.2fr; /* El panel derecho es ligeramente más ancho */
+  grid-template-columns: 1fr 1.2fr;
   gap: 32px;
   max-width: 1100px;
   margin: 0 auto;
@@ -325,33 +325,6 @@ a {
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-
-.cajita {
-  background-color: white;
-  padding: 20px 24px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.cajita h3 {
-  margin: 0;
-  font-size: 1.05rem;
-  color: black;
-  font-weight: 500;
-}
-
-.cajita:hover,
-.cajita.active {
-  /*queremos borde?*/
-  background-color: #70a0d0;
-  box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.08);
-}
-
-.cajita:hover h3,
-.cajita.active h3 {
-  color: white;
 }
 
 .caja-diagnostico {
@@ -365,32 +338,120 @@ a {
   align-items: center;
 }
 
-/*.contenedor-cuadrados {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.tarjeta-cuadrada {
-  background: rgba(255, 255, 255, 0.21);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1.3px);
-  -webkit-backdrop-filter: blur(1.3px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  overflow: hidden;
-}
-
-.encabezado {
+.sintoma-btn {
   display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+  font-family: inherit;
 }
 
-.encabezado img {
-  height: 20px;
+.sintoma-btn img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.7;
 }
-*/
+
+.sintoma-btn span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.sintoma-btn:hover,
+.sintoma-btn.active {
+  background-color: #f1f5f9;
+  border-color: #003049;
+  box-shadow: 0 4px 12px rgba(0, 48, 73, 0.08);
+}
+
+.sintoma-btn.active img {
+  opacity: 1;
+}
+
+.sintoma-btn.active span {
+  color: #003049;
+  font-weight: 600;
+}
+
+.ficha-categoria {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #64748b;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.ficha-sintoma-titulo {
+  color: #003049;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+}
+
+.tarjetas-afecciones {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.tarjeta-afeccion-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #f8fafc;
+  padding: 18px 24px;
+  border-radius: 10px;
+  border: 1px solid #f1f5f9;
+  transition: transform 0.2s ease;
+}
+
+.tarjeta-afeccion-item:hover {
+  transform: translateX(5px);
+}
+
+.indicador-azul {
+  width: 4px;
+  height: 24px;
+  background-color: var(--azul);
+  border-radius: 2px;
+}
+
+.tarjeta-afeccion-item span {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.ficha-advertencia {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background-color: #f0f9ff;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.ficha-advertencia i {
+  color: var(--azul);
+}
+
+.ficha-advertencia p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #0369a1;
+}
+
 #estudios {
   display: flex;
   flex-direction: column;
