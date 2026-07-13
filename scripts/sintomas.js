@@ -6,34 +6,38 @@ const datos = {
 
   oido: {
     titulo: "Molestias en el oído",
-    afecciones: ["Otitis", "Tapón de cerumen", "Perforación timpánica"],
+    afecciones: ["Otitis", "Tapón de cerumen", "Presbiacucia"],
   },
 
   voz: {
     titulo: "Cambios en la voz",
-    afecciones: ["Disfonía", "Nódulos vocales", "Laringitis"],
+    afecciones: ["Disfonía", "Nódulos vocales", "Ronquera"],
   },
 
   vertigo: {
     titulo: "Mareos o vértigo",
     afecciones: [
-      "Vértigo posicional",
+      "Trastornos del equilibrio",
       "Enfermedad de Ménière",
-      "Neuronitis vestibular",
+      "Vértigo posicional",
     ],
   },
 
   audicion: {
     titulo: "Problemas de audición",
-    afecciones: ["Hipoacusia", "Otosclerosis", "Pérdida auditiva"],
+    afecciones: [
+      "Trastorno del procesamiento auditivo",
+      "Acúfenos (zumbidos)",
+      "Pérdida auditiva",
+    ],
   },
 
   rinoplastia: {
     titulo: "Problemas respiratorios o estéticos",
     afecciones: [
       "Desviación del tabique",
-      "Hipertrofia de cornetes",
-      "Evaluación para rinoplastia",
+      "Obstrucción nasal",
+      "Rinoplastía funcional y estética",
     ],
   },
 };
@@ -67,7 +71,6 @@ botones.forEach((boton) => {
     cambiarContenido(boton.dataset.sintoma);
   });
 
-  // Para celulares
   boton.addEventListener("click", () => {
     botones.forEach((b) => b.classList.remove("active"));
     boton.classList.add("active");
