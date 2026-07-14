@@ -43,6 +43,12 @@ body {
   width: 100%;
 }
 
+h2 {
+  color: var(--azul);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
 h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -306,10 +312,7 @@ a {
 
 #tratamos h2 {
   text-align: center;
-  color: var(--azul);
-  font-size: 2rem;
   margin-bottom: 40px;
-  font-weight: 600;
 }
 
 .contenedor-cajas {
@@ -589,11 +592,40 @@ a {
   margin: 0;
 }
 
+#insta {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#insta p {
+  max-width: 40%;
+  text-align: center;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.publicaciones {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.instagram-media {
+  height: 650px !important;
+  overflow: hidden !important;
+  border-radius: 12px !important;
+}
+
 #ubicacion {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 50px;
+
+  background-color: #f5f7f9;
 }
 
 #ubicacion h2 {
@@ -605,8 +637,8 @@ a {
 }
 
 #faq {
-  margin: 40px auto;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 40px;
   min-height: 60vh;
   font-family:
     system-ui,
