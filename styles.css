@@ -623,7 +623,6 @@ a {
 }
 
 .instagram-media {
-  height: 650px !important;
   overflow: hidden !important;
   border-radius: 12px !important;
 }
@@ -942,6 +941,12 @@ footer li:hover {
   font-weight: 200;
 }
 
+@media (min-width: 993px) {
+  .instagram-media {
+    height: 650px !important;
+  }
+}
+
 @media (max-width: 992px) {
   .hero {
     justify-content: center;
@@ -1019,6 +1024,11 @@ footer li:hover {
 
   .ficha-advertencia p {
     font-size: 1rem;
+  }
+
+  .publicaciones {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -1157,6 +1167,22 @@ footer li:hover {
   .estudio-chico .rectangulo img {
     max-width: 180px;
     height: 180px;
+  }
+
+  #insta {
+    padding: 40px 20px;
+  }
+
+  #insta h2 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  #insta p {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 10px;
   }
 
   .form-container {
