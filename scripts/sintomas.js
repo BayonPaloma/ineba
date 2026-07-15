@@ -45,6 +45,17 @@ const datos = {
 const botones = document.querySelectorAll(".sintoma-btn");
 const titulo = document.getElementById("sintoma-seleccionado");
 const contenedor = document.getElementById("contenedor-afecciones");
+const botonesSintoma = document.querySelectorAll(".sintoma-btn");
+
+botonesSintoma.forEach((boton) => {
+  boton.addEventListener("click", () => {
+    boton.scrollIntoView({
+      behavior: "smooth",
+      inline: "start",
+      block: "nearest",
+    });
+  });
+});
 
 function cambiarContenido(clave) {
   const info = datos[clave];
