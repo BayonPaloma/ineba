@@ -968,6 +968,29 @@ footer li:hover {
   .tarjeta {
     max-width: 320px;
   }
+
+  .tipo-estudio {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rectangulo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .rectangulo .texto {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .rectangulo img {
+    width: 100%;
+    max-width: 420px;
+    height: 240px;
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1049,6 +1072,64 @@ footer li:hover {
     line-height: 1.6;
   }
 
+  #estudios {
+    padding-bottom: 80px;
+  }
+
+  .tipo-estudio {
+    width: calc(100% - 40px);
+    padding: 35px 20px;
+    margin-top: 60px;
+    border-radius: 20px;
+  }
+
+  .tipo-estudio::before {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .tipo-estudio h4 {
+    font-size: 0.95rem;
+    left: 1.2rem;
+  }
+
+  .rectangulo {
+    padding: 20px;
+    gap: 20px;
+    border-radius: 14px;
+  }
+
+  .rectangulo h3 {
+    font-size: 1.25rem;
+  }
+
+  .rectangulo p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .rectangulo img {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+  }
+
+  .estudio-chico {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .estudio-chico .rectangulo {
+    padding: 20px;
+  }
+
+  .estudio-chico .rectangulo img {
+    max-width: 180px;
+    height: 180px;
+  }
+
   .form-container {
     width: 90%;
     padding: 20px;
@@ -1096,5 +1177,26 @@ footer li:hover {
 
   .hero-text {
     margin: 24px 20px;
+  }
+
+  .tipo-estudio {
+    width: calc(100% - 30px);
+    padding: 30px 15px;
+  }
+
+  .tipo-estudio h4 {
+    font-size: 0.85rem;
+  }
+
+  .rectangulo h3 {
+    font-size: 1.1rem;
+  }
+
+  .rectangulo p {
+    font-size: 0.95rem;
+  }
+
+  .rectangulo img {
+    height: 170px;
   }
 }
