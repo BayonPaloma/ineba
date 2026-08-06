@@ -285,6 +285,7 @@ a {
 
 .tarjeta ul {
   list-style-type: square;
+  padding: 0px 20px;
 }
 
 .tarjeta li::marker {
