@@ -99,7 +99,9 @@ a {
   background-color: white;
   border-radius: 2px;
   filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.4));
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .nav-menu {
@@ -140,6 +142,33 @@ a {
 
 .nav-menu a:hover {
   background-color: #78ccdf;
+}
+
+.redes-menu {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.redes-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.redes-menu a:hover {
+  background-color: transparent;
+  color: #78ccdf;
 }
 
 .btn-menu {
@@ -203,14 +232,6 @@ a {
   font-weight: 500;
   color: white;
   margin-bottom: 2.5rem;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
-}
-
-.hero h3 {
-  font-size: 30px;
-  font-weight: 500;
-  color: white;
-  margin-bottom: 2.5rem;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -255,7 +276,9 @@ a {
   box-shadow:
     0 4px 6px -1px rgba(0, 0, 0, 0.03),
     0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   overflow: hidden;
   max-width: 250px;
 }
@@ -361,7 +384,9 @@ a {
   border-radius: 12px;
   cursor: pointer;
   text-align: left;
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   font-family: inherit;
 }
 
@@ -910,7 +935,6 @@ form {
 
 footer {
   background-color: #0d3858;
-  color: rgba(255, 255, 255, 0.7);
   font-family:
     system-ui,
     -apple-system,
@@ -953,6 +977,28 @@ footer li:hover {
   text-align: center;
   padding-top: 40px;
   font-weight: 200;
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-float:hover {
+  background-color: #128c7e;
 }
 
 @media (min-width: 993px) {
