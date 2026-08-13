@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector(".contacto form");
+  const form = document.querySelector("#contacto form");
   const popup = document.getElementById("customPopup");
   const closePopupBtn = document.getElementById("closePopup");
 
