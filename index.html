@@ -21,7 +21,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       function gtag_report_conversion_contacto(url) {
         var callback = function () {
           if (typeof url != "undefined") {
-            window.location = url;
+            window.open(url, "_blank");
           }
         };
         gtag("event", "conversion", {
@@ -39,7 +39,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       function gtag_report_conversion_reserva(url) {
         var callback = function () {
           if (typeof url != "undefined") {
-            window.location = url;
+            window.open(url, "_blank");
           }
         };
         gtag("event", "conversion", {
@@ -136,13 +136,13 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <h3>Atención integral en otorrinolaringología</h3>
             <a
               href="https://wa.me/5491138889955?text=Hola!%20Vi%20tu%20web%20y%20quiero%20solicitar%20un%20turno.%20"
-              target="_blank"
               class="boton btn-hero"
               aria-label="Contactar por WhatsApp"
               onclick="
                 gtag_report_conversion_reserva(this.href);
                 return false;
               "
+              target="_blank"
             >
               <i class="fa-brands fa-whatsapp"></i>Solicitar turno
             </a>
