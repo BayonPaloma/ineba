@@ -18,7 +18,7 @@
     <!-- Event snippet for Contacto conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
-      function gtag_report_conversion(url) {
+      function gtag_report_conversion_contacto(url) {
         var callback = function () {
           if (typeof url != "undefined") {
             window.location = url;
@@ -36,7 +36,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     <!-- Event snippet for Reserva de cita conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
-      function gtag_report_conversion(url) {
+      function gtag_report_conversion_reserva(url) {
         var callback = function () {
           if (typeof url != "undefined") {
             window.location = url;
@@ -110,6 +110,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             href="https://wa.me/5491138889955?text=Hola!%20Vi%20tu%20web%20y%20queria%20hacer%20una%20consulta.%20"
             target="_blank"
             aria-label="Contactar por WhatsApp"
+            onclick="
+              gtag_report_conversion_reserva(this.href);
+              return false;
+            "
           >
             <i class="fa-brands fa-whatsapp"></i>
           </a>
@@ -135,6 +139,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
               target="_blank"
               class="boton btn-hero"
               aria-label="Contactar por WhatsApp"
+              onclick="
+                gtag_report_conversion_reserva(this.href);
+                return false;
+              "
             >
               <i class="fa-brands fa-whatsapp"></i>Solicitar turno
             </a>
@@ -1588,7 +1596,13 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
               placeholder="Escribí tu mensaje"
             ></textarea>
           </div>
-          <button type="submit" class="btn-submit">Enviar</button>
+          <button
+            type="submit"
+            class="btn-submit"
+            onclick="gtag_report_conversion_contacto()"
+          >
+            Enviar
+          </button>
           <input
             type="hidden"
             name="_next"
@@ -1650,6 +1664,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       href="https://wa.me/5491138889955?text=Hola!%20Vi%20tu%20web%20y%20tengo%20una%20consulta%20"
       class="whatsapp-float"
       target="_blank"
+      onclick="
+        gtag_report_conversion_reserva(this.href);
+        return false;
+      "
     >
       <i class="fa-brands fa-whatsapp"></i>
     </a>
